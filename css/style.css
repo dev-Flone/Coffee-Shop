@@ -16,7 +16,7 @@
 }
 
 body {
-  min-height: 200vh;
+  min-height: 300vh;
   font-family: "Poppins", sans-serif;
   background-color: var(--bg-color);
   color: var(--secondary-color);
@@ -103,6 +103,7 @@ body {
 }
 
 /* Hero Section */
+/* Home Section */
 .hero {
   display: flex;
   align-items: center;
@@ -120,7 +121,7 @@ body {
   position: absolute;
   bottom: 0;
   width: 100%;
-  height: 10%;
+  height: 20%;
   background: linear-gradient(to top, rgb(1, 3, 3), rgba(255, 255, 255, 0));
 }
 .hero .content {
@@ -153,6 +154,63 @@ body {
 .hero .content .btn:hover {
   background-color: var(--secondary-color);
   color: var(--primary-color);
+}
+
+/* About Section */
+.about {
+  padding: 100px 0;
+  text-align: center;
+}
+.about h2 {
+  font-size: 2.5rem;
+  margin-bottom: 20px;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+}
+.about .about-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  display: flex;
+  justify-content: space-around;
+}
+.about .about-container .about-img {
+  border-radius: 50%;
+  display: inline-block;
+  position: relative;
+}
+.about .about-container .about-img img {
+  border-radius: 50%;
+  display: block;
+}
+.about .about-container .about-img:after {
+  content: "";
+  display: block;
+  width: 100%;
+  height: 100%;
+  background: radial-gradient(rgba(1, 3, 3, 0) 0, var(--bg-color) 70%);
+  border-radius: 50%;
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+.about .about-content {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  text-align: justify;
+  flex: 1 1 45rem;
+  padding: 0 20px;
+}
+.about .about-content h3 {
+  font-size: 1.8rem;
+  margin-bottom: 1rem;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+.about .about-content h3 p {
+  font-size: 1.4rem;
+  margin-bottom: 0.8;
+  line-height: 1.6;
 }
 
 /* Media Queries */
