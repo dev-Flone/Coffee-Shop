@@ -133,6 +133,72 @@ body
                 background-color: var(--secondary-color)
                 color: var(--primary-color)
 
+/* Menu Section */
+.menu
+    display: flex
+    flex-direction: column
+    align-items: center
+    justify-content: center
+    padding: 100px 0
+    text-align: center
+    h2
+        font-size: 2.5rem
+        margin-bottom: 20px
+        text-transform: uppercase
+        letter-spacing: 2px
+    .menu-container
+        display: flex
+        flex-wrap: wrap
+        max-width: 1200px
+        align-items: center
+        justify-content: center
+        margin: 0 auto
+        gap: 30px
+        .menu-item
+            background-color: rgba(30, 30, 30, 0.8)
+            backdrop-filter: blur(10px)
+            border-radius: 10px
+            padding: 20px
+            width: 300px
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2)
+            transition: transform 0.3s ease
+            &:hover
+                transform: translateY(-10px)
+            img
+                aspect-ratio: 16/9
+                width: 100%
+                object-fit: cover
+                border-radius: 10px
+                margin-bottom: 15px
+            h3
+                font-size: 1.5rem
+                margin-bottom: 10px
+                text-transform: uppercase
+                letter-spacing: 1px
+            p
+                font-size: 1rem
+                margin-bottom: 15px
+                line-height: 1.4
+            .price
+                font-size: 1.2rem
+                font-weight: bold
+                color: var(--primary-color)
+                margin-bottom: 10px
+            .btn
+                display: inline-block
+                padding: 10px 20px
+                background-color: var(--primary-color)
+                color: var(--secondary-color)
+                border-radius: 30px
+                text-transform: uppercase
+                letter-spacing: 1px
+                font-weight: 500
+                cursor: pointer
+                transition: all 0.3s ease
+                &:hover
+                    background-color: var(--secondary-color)
+                    color: var(--primary-color)
+
 /* About Section */
 .about
     padding: 100px 0
