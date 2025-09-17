@@ -14,6 +14,8 @@
     outline: none
 
 body
+    display: flex
+    flex-direction: column
     min-height: 300vh
     font-family: 'Poppins', sans-serif
     background-color: var(--bg-color)
@@ -201,6 +203,7 @@ body
 
 /* About Section */
 .about
+    height: 100vh
     padding: 100px 0
     text-align: center
     h2
@@ -212,6 +215,7 @@ body
         max-width: 1200px
         margin: 0 auto
         display: flex
+        align-items: center
         justify-content: space-around
         .about-img
             border-radius: 50%
@@ -247,6 +251,50 @@ body
                 font-size: 1.4rem
                 margin-bottom: 0.8
                 line-height: 1.6
+
+/* Contact Section */
+.contact
+    height: 100vh
+    padding: 100px 0
+    text-align: center
+    h2
+        font-size: 2.5rem
+        margin-bottom: 20px
+        text-transform: uppercase
+        letter-spacing: 2px
+    .contact-container
+        max-width: 600px
+        margin: 0 auto
+        display: flex
+        flex-direction: column
+        gap: 20px
+        input, textarea
+            width: 100%
+            padding: 10px
+            border-radius: 5px
+            border: 1px solid rgba(255, 255, 255, 0.2)
+            background-color: rgba(30, 30, 30, 0.8)
+            color: var(--secondary-color)
+            font-size: 1rem
+            resize: none
+            &:focus
+                border-color: var(--primary-color)
+                outline: none
+        .btn
+            margin-top: 20px
+            padding: 10px 30px
+            background-color: var(--primary-color)
+            color: var(--secondary-color)
+            border-radius: 30px
+            text-transform: uppercase
+            letter-spacing: 1px
+            font-weight: 500
+            cursor: pointer
+            transition: all 0.3s ease
+            &:hover
+                background-color: var(--secondary-color)
+                color: var(--primary-color)
+
 /* Media Queries */
 /* Laptop */
 @media (max-width: 992px)
@@ -256,6 +304,8 @@ body
             font-size: .9rem
 /* Tablet */
 @media (max-width: 768px)
+    .menu h2, .about h2, .contact h2
+        padding-top: 2rem
     #menu-btn
         transition: transform 1s ease
         display: block
@@ -283,3 +333,122 @@ body
             font-size: 1.5rem
     .nav-item.active
         right: 0
+    .hero
+        .content
+            h1
+                font-size: 3rem
+            p
+                font-size: 1rem
+            .btn
+                padding: 8px 20px
+                font-size: .9rem
+    .menu
+        padding: 70px 0
+        h2
+            font-size: 2rem
+        .menu-container
+            gap: 20px
+            .menu-item
+                width: 250px
+                img
+                    aspect-ratio: 4/3
+                h3
+                    font-size: 1.3rem
+                p
+                    font-size: .9rem
+                .price
+                    font-size: 1rem
+                .btn
+                    padding: 8px 20px
+                    font-size: .9rem
+    .about
+        padding: 70px 0
+        h2
+            font-size: 2rem
+        .about-container
+            flex-direction: column
+            text-align: center
+            .about-img
+                transform: scale(0.8)
+                margin-bottom: 20px
+            .about-content
+                flex: none
+                text-align: justify
+                h3
+                    font-size: 1.5rem
+                p
+                    font-size: 1.2rem
+    .contact
+        padding: 70px 0
+        h2
+            font-size: 2rem
+        .contact-container
+            input, textarea
+                font-size: .9rem
+            .btn
+                padding: 8px 20px
+                font-size: .9rem
+/* Mobile */
+@media (max-width: 480px)
+    .nav-container
+        padding: 0 20px
+    .nav-logo
+        font-size: 1.2rem
+    .nav-icon
+        gap: 10px
+        i
+            font-size: 18px
+    .hero
+        height: 60vh
+        .content
+            h1
+                font-size: 2rem
+            p
+                font-size: .9rem
+            .btn
+                padding: 6px 15px
+                font-size: .8rem
+    .menu
+        padding: 50px 0
+        h2
+            font-size: 1.5rem
+        .menu-container
+            gap: 15px
+            .menu-item
+                width: 200px
+                img
+                    aspect-ratio: 4/3
+                h3
+                    font-size: 1.1rem
+                p
+                    font-size: .8rem
+                .price
+                    font-size: .9rem
+                .btn
+                    padding: 6px 15px
+                    font-size: .8rem
+    .about
+        padding: 50px 0
+        h2
+            font-size: 1.5rem
+        .about-container
+            flex-direction: column
+            text-align: center
+            .about-img
+                transform: scale(0.6)
+                margin-bottom: 15px
+            .about-content
+                h3
+                    font-size: 1.2rem
+                p
+                    font-size: 1rem
+    .contact
+        padding: 50px 0
+        h2
+            font-size: 1.5rem
+        .contact-container
+            input, textarea
+                font-size: .8rem
+            .btn
+                padding: 6px 15px
+                font-size: .8rem

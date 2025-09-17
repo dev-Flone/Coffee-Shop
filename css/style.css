@@ -16,6 +16,8 @@
 }
 
 body {
+  display: flex;
+  flex-direction: column;
   min-height: 300vh;
   font-family: "Poppins", sans-serif;
   background-color: var(--bg-color);
@@ -237,6 +239,7 @@ body {
 
 /* About Section */
 .about {
+  height: 100vh;
   padding: 100px 0;
   text-align: center;
 }
@@ -250,6 +253,7 @@ body {
   max-width: 1200px;
   margin: 0 auto;
   display: flex;
+  align-items: center;
   justify-content: space-around;
 }
 .about .about-container .about-img {
@@ -292,6 +296,56 @@ body {
   line-height: 1.6;
 }
 
+/* Contact Section */
+.contact {
+  height: 100vh;
+  padding: 100px 0;
+  text-align: center;
+}
+.contact h2 {
+  font-size: 2.5rem;
+  margin-bottom: 20px;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+}
+.contact .contact-container {
+  max-width: 600px;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+.contact .contact-container input, .contact .contact-container textarea {
+  width: 100%;
+  padding: 10px;
+  border-radius: 5px;
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  background-color: rgba(30, 30, 30, 0.8);
+  color: var(--secondary-color);
+  font-size: 1rem;
+  resize: none;
+}
+.contact .contact-container input:focus, .contact .contact-container textarea:focus {
+  border-color: var(--primary-color);
+  outline: none;
+}
+.contact .contact-container .btn {
+  margin-top: 20px;
+  padding: 10px 30px;
+  background-color: var(--primary-color);
+  color: var(--secondary-color);
+  border-radius: 30px;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  font-weight: 500;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+.contact .contact-container .btn:hover {
+  background-color: var(--secondary-color);
+  color: var(--primary-color);
+}
+
 /* Media Queries */
 /* Laptop */
 @media (max-width: 992px) {
@@ -304,6 +358,9 @@ body {
 }
 /* Tablet */
 @media (max-width: 768px) {
+  .menu h2, .about h2, .contact h2 {
+    padding-top: 2rem;
+  }
   #menu-btn {
     transition: transform 1s ease;
     display: block;
@@ -336,5 +393,169 @@ body {
   }
   .nav-item.active {
     right: 0;
+  }
+  .hero .content h1 {
+    font-size: 3rem;
+  }
+  .hero .content p {
+    font-size: 1rem;
+  }
+  .hero .content .btn {
+    padding: 8px 20px;
+    font-size: 0.9rem;
+  }
+  .menu {
+    padding: 70px 0;
+  }
+  .menu h2 {
+    font-size: 2rem;
+  }
+  .menu .menu-container {
+    gap: 20px;
+  }
+  .menu .menu-container .menu-item {
+    width: 250px;
+  }
+  .menu .menu-container .menu-item img {
+    aspect-ratio: 4/3;
+  }
+  .menu .menu-container .menu-item h3 {
+    font-size: 1.3rem;
+  }
+  .menu .menu-container .menu-item p {
+    font-size: 0.9rem;
+  }
+  .menu .menu-container .menu-item .price {
+    font-size: 1rem;
+  }
+  .menu .menu-container .menu-item .btn {
+    padding: 8px 20px;
+    font-size: 0.9rem;
+  }
+  .about {
+    padding: 70px 0;
+  }
+  .about h2 {
+    font-size: 2rem;
+  }
+  .about .about-container {
+    flex-direction: column;
+    text-align: center;
+  }
+  .about .about-container .about-img {
+    transform: scale(0.8);
+    margin-bottom: 20px;
+  }
+  .about .about-container .about-content {
+    flex: none;
+    text-align: justify;
+  }
+  .about .about-container .about-content h3 {
+    font-size: 1.5rem;
+  }
+  .about .about-container .about-content p {
+    font-size: 1.2rem;
+  }
+  .contact {
+    padding: 70px 0;
+  }
+  .contact h2 {
+    font-size: 2rem;
+  }
+  .contact .contact-container input, .contact .contact-container textarea {
+    font-size: 0.9rem;
+  }
+  .contact .contact-container .btn {
+    padding: 8px 20px;
+    font-size: 0.9rem;
+  }
+}
+/* Mobile */
+@media (max-width: 480px) {
+  .nav-container {
+    padding: 0 20px;
+  }
+  .nav-logo {
+    font-size: 1.2rem;
+  }
+  .nav-icon {
+    gap: 10px;
+  }
+  .nav-icon i {
+    font-size: 18px;
+  }
+  .hero {
+    height: 60vh;
+  }
+  .hero .content h1 {
+    font-size: 2rem;
+  }
+  .hero .content p {
+    font-size: 0.9rem;
+  }
+  .hero .content .btn {
+    padding: 6px 15px;
+    font-size: 0.8rem;
+  }
+  .menu {
+    padding: 50px 0;
+  }
+  .menu h2 {
+    font-size: 1.5rem;
+  }
+  .menu .menu-container {
+    gap: 15px;
+  }
+  .menu .menu-container .menu-item {
+    width: 200px;
+  }
+  .menu .menu-container .menu-item img {
+    aspect-ratio: 4/3;
+  }
+  .menu .menu-container .menu-item h3 {
+    font-size: 1.1rem;
+  }
+  .menu .menu-container .menu-item p {
+    font-size: 0.8rem;
+  }
+  .menu .menu-container .menu-item .price {
+    font-size: 0.9rem;
+  }
+  .menu .menu-container .menu-item .btn {
+    padding: 6px 15px;
+    font-size: 0.8rem;
+  }
+  .about {
+    padding: 50px 0;
+  }
+  .about h2 {
+    font-size: 1.5rem;
+  }
+  .about .about-container {
+    flex-direction: column;
+    text-align: center;
+  }
+  .about .about-container .about-img {
+    transform: scale(0.6);
+    margin-bottom: 15px;
+  }
+  .about .about-container .about-content h3 {
+    font-size: 1.2rem;
+  }
+  .about .about-container .about-content p {
+    font-size: 1rem;
+  }
+  .contact {
+    padding: 50px 0;
+  }
+  .contact h2 {
+    font-size: 1.5rem;
+  }
+  .contact .contact-container input, .contact .contact-container textarea {
+    font-size: 0.8rem;
+  }
+  .contact .contact-container .btn {
+    padding: 6px 15px;
+    font-size: 0.8rem;
   }
 }/*# sourceMappingURL=style.css.map */
